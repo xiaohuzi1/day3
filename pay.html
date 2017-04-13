@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>订单支付</title>
+</head>
+<body ng-app='app'>
+    <header class="pay-header">
+        <a href="" class="left"><i class="fa fa-angle-left"></i></a>
+        <h2>订单支付</h2>
+        <a href="" class="right"><i class="fa fa-comments"></i></a>
+    </header>
+    <section class="pay-section">
+        <div class="address">
+            <p class="address-top">
+                <b>路飞</b>
+                <span>138****2546</span>
+            </p>
+            <p class="address-bottom">
+                <i class="fa fa-map-marker"></i>
+                <span>北京市海淀区知春路北京市海淀区知春路北京市海淀区知春路</span>
+                <i class="fa fa-angle-right"></i>
+            </p>
+        </div>
+        <p class="img"><img src="images/images_02.png" alt=""></p>
+        <div class="shop" ng-controller="ctrl">
+            <h2><img src="images/images_05.png" alt=""><span>恒之然旗舰店</span></h2>
+            <dl>
+                <dt><img src="images/images_09.png" alt=""></dt>
+                <dd>
+                    <h3>维维嚼益嚼水果大豆棒橙味维维嚼益嚼水果大豆棒橙味</h3>
+                    <div class="dd-bottom">
+                        <p class="one">
+                            <b>$988.00</b>
+                            <span>$1000.00</span>
+                        </p>
+                        <p class="two">
+                            <button ng-click="decrement()">-</button>
+                            <span>{{text}}</span>
+                            <button ng-click='increment()'>+</button>
+                        </p>
+                    </div>
+                </dd>
+            </dl>
+            <ul>
+                <li>商品总金额：<span>￥988.00</span></li>
+                <li>运费：<span>￥10.00</span></li>
+                <li>总额(含运费)：￥<span>{{total}}</span></li>
+            </ul>
+        </div>
+        <p class="bg"></p>
+        <ul>
+            <li>
+                余额支付 ￥100.00
+                <label class="toggle-radio green">
+                    <input type="checkbox">
+                    <div class="track">
+                        <div class="icon"></div>
+                    </div>
+                </label>
+            </li>
+            <li>
+                资金支付 ￥100.00
+                <label class="toggle-radio green">
+                    <input type="checkbox">
+                    <div class="track">
+                        <div class="icon"></div>
+                    </div>
+                </label>
+            </li>
+            <li>其他支付方式 ￥1000.00<span><i class="fa fa-angle-right"></i></span></li>
+        </ul>
+    </section>
+    <footer class="pay-footer">
+        <p>总计：￥<span class="price">988.00</span></p>
+        <p>(含运费)</p>
+        <button class="submit">提交订单</button>
+    </footer>
+    <div class="pay-method">
+        <p>余额不足，请选择其他方式支付 !</p>
+    </div>
+    <script src="js/angular.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/plug.js"></script>
+    <script>
+        var app = angular.module('app',[])
+        app.controller('ctrl',function($scope,$rootScope){
+            $scope.total= '988.00'
+            $scope.text =1;
+            $scope.decrement = function(){
+                if($scope.text<=0){
+                    alert('数量不能低于0!');
+                    return;
+                }else{
+                    $scope.text--;
+                    $scope.total = ($scope.text*988).toFixed(2)
+                    $('.price').html($scope.total)
+                }
+            }
+            $scope.increment = function(){
+                if($scope.text>=5){
+                    alert('最多只能购买五件!');
+                    return;
+                }else{
+                    $scope.text++;
+                    $scope.total = ($scope.text*988).toFixed(2)
+                    $('.price').html($scope.total)
+                }
+            }
+        })
+        $('.submit').on('click',function(){
+            //调用插件
+            $('body').dialog({
+                content:"确定要提交吗",
+                btns:['确定','取消','X'],
+                callback:function(){
+                    location.href='submit.html'
+                }
+            })
+        })
+    </script>
+</body>
+</html>

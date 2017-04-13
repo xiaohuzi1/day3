@@ -1,0 +1,296 @@
+body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.12rem;
+  display: -webkit-flex;
+  -webkit-flex-direction: column; }
+
+.mark {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99; }
+
+.dialog {
+  width: 60%;
+  height: 1.5rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: 50% auto;
+  z-index: 100; }
+  .dialog .dia_top {
+    height: 0.6rem;
+    text-align: center;
+    line-height: 0.6rem;
+    color: #ffffff;
+    background: #666666;
+    border-radius: 0.15rem 0.15rem 0 0; }
+  .dialog .btns {
+    height: 0.9rem;
+    background: #cccccc;
+    border-radius: 0 0 0.15rem 0.15rem; }
+    .dialog .btns span:first-child, .dialog .btns span:nth-child(2) {
+      height: 0.3rem;
+      width: 43%;
+      background: red;
+      display: inline-block;
+      border-radius: 0.2rem;
+      text-align: center;
+      color: #fff;
+      line-height: 0.3rem;
+      margin: 0.3rem auto;
+      margin-left: 0.1rem; }
+    .dialog .btns span:last-child {
+      position: absolute;
+      width: 0.2rem;
+      height: 0.2rem;
+      border-radius: 0.1rem;
+      background: #666;
+      color: #fff;
+      right: -0.1rem;
+      top: -0.1rem;
+      text-align: center;
+      line-height: 0.2rem; }
+
+.pay-header {
+  height: 0.44rem;
+  line-height: 0.44rem;
+  text-align: center;
+  padding-left: 0.15rem;
+  padding-right: 0.15rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative; }
+  .pay-header h2 {
+    font-size: 0.16rem;
+    color: #333333; }
+  .pay-header a {
+    position: absolute;
+    top: 0; }
+    .pay-header a i {
+      font-size: 0.2rem;
+      color: #333333; }
+  .pay-header .left {
+    left: 0.15rem; }
+  .pay-header .right {
+    right: 0.15rem; }
+
+.pay-section {
+  -webkit-flex: 1;
+  overflow-y: scroll; }
+  .pay-section .address {
+    padding-left: 0.15rem;
+    padding-right: 0.15rem;
+    box-sizing: border-box; }
+    .pay-section .address .address-top {
+      height: 0.4rem;
+      line-height: 0.4rem;
+      color: #333333;
+      font-size: 0.14rem; }
+      .pay-section .address .address-top b {
+        display: inline-block;
+        width: 0.66rem;
+        text-align: center; }
+    .pay-section .address .address-bottom {
+      height: 0.4rem;
+      color: #333333;
+      font-size: 0.12rem;
+      padding: 0.08rem 0.2rem 0 0.2rem;
+      box-sizing: border-box;
+      position: relative; }
+      .pay-section .address .address-bottom span {
+        line-height: 0.16rem; }
+      .pay-section .address .address-bottom i {
+        color: #333333;
+        font-size: 0.16rem;
+        position: absolute;
+        top: 0.12rem; }
+        .pay-section .address .address-bottom i:nth-child(1) {
+          left: 0; }
+        .pay-section .address .address-bottom i:last-child {
+          right: 0; }
+  .pay-section .img {
+    height: 0.2rem;
+    margin-top: 0.1rem; }
+    .pay-section .img img {
+      width: 100%;
+      height: 100%; }
+  .pay-section .shop {
+    padding-left: 0.15rem;
+    padding-right: 0.15rem;
+    box-sizing: border-box; }
+    .pay-section .shop h2 {
+      height: 0.45rem;
+      line-height: 0.45rem;
+      color: #333333;
+      font-size: 0.14rem;
+      position: relative; }
+      .pay-section .shop h2 img {
+        width: 0.2rem;
+        height: 0.2rem;
+        position: absolute;
+        top: 0.12rem; }
+      .pay-section .shop h2 span {
+        margin-left: 0.3rem; }
+    .pay-section .shop dl {
+      display: -webkit-flex;
+      margin-bottom: 0.24rem; }
+      .pay-section .shop dl dt {
+        width: 1rem;
+        height: 1rem;
+        padding: 0.1rem;
+        box-sizing: border-box;
+        border: 1px solid #cccccc;
+        margin-right: 0.1rem; }
+        .pay-section .shop dl dt img {
+          width: 100%;
+          height: 100%; }
+      .pay-section .shop dl dd {
+        width: 80%; }
+        .pay-section .shop dl dd h3 {
+          margin-top: 0.05rem;
+          line-height: 0.2rem;
+          font-size: 0.14rem;
+          color: #333333;
+          margin-bottom: 0.15rem; }
+        .pay-section .shop dl dd div {
+          height: 0.32rem;
+          position: relative;
+          display: -webkit-flex; }
+          .pay-section .shop dl dd div .one {
+            width: 0.63rem; }
+            .pay-section .shop dl dd div .one b {
+              height: 0.22rem;
+              line-height: 0.22rem;
+              font-size: 0.16rem;
+              color: #fc4141; }
+            .pay-section .shop dl dd div .one span {
+              font-size: 0.1rem;
+              color: #cccccc;
+              text-decoration: line-through; }
+          .pay-section .shop dl dd div .two {
+            position: absolute;
+            right: 0;
+            height: 0.32rem;
+            color: #333333; }
+            .pay-section .shop dl dd div .two button {
+              width: 0.27rem;
+              border: 1px solid #cccccc;
+              background: #ffffff; }
+            .pay-section .shop dl dd div .two span {
+              display: inline-block;
+              text-align: center;
+              width: 0.27rem;
+              border: 1px solid #cccccc; }
+    .pay-section .shop ul li {
+      height: 0.26rem;
+      line-height: 0.26rem;
+      font-size: 0.12rem;
+      color: #666666;
+      position: relative; }
+      .pay-section .shop ul li span {
+        position: absolute;
+        right: 0; }
+      .pay-section .shop ul li:last-child span {
+        color: #fc4141;
+        font-weight: bold; }
+  .pay-section .bg {
+    background: #eeeeee;
+    height: 0.1rem; }
+  .pay-section ul {
+    padding-left: 0.15rem;
+    padding-right: 0.15rem;
+    box-sizing: border-box; }
+    .pay-section ul li {
+      height: 0.58rem;
+      line-height: 0.58rem;
+      font-size: 0.14rem;
+      color: #333333;
+      position: relative; }
+      .pay-section ul li span {
+        position: absolute;
+        right: 0; }
+        .pay-section ul li span i {
+          font-size: 0.16rem;
+          color: #333333; }
+      .pay-section ul li label {
+        position: absolute;
+        right: 0;
+        margin-top: 0.15rem; }
+      .pay-section ul li .toggle-radio input:checked + .track .icon {
+        left: 29px; }
+      .pay-section ul li .green input:checked + .track {
+        background: #46d264; }
+      .pay-section ul li .track {
+        width: 56px;
+        height: 28px;
+        border: 1px solid #cccccc;
+        border-radius: 16px;
+        position: relative; }
+      .pay-section ul li input {
+        display: none; }
+      .pay-section ul li .icon {
+        width: 28px;
+        height: 26px;
+        border-radius: 16px;
+        border: 1px solid #cccccc;
+        background: #ffffff;
+        position: absolute;
+        -webkit-transition: left 0.5s; }
+
+.pay-footer {
+  height: 0.6rem;
+  background: #ffffff;
+  text-align: center;
+  padding-top: 0.08rem;
+  box-sizing: border-box;
+  border-top: 1px solid #eeeeee;
+  position: relative; }
+  .pay-footer p:nth-child(1) {
+    height: 0.26rem;
+    line-height: 0.26rem;
+    color: #f71919;
+    font-size: 0.12rem;
+    font-weight: bold; }
+  .pay-footer p:nth-child(2) {
+    font-size: 0.12rem;
+    color: #666666; }
+  .pay-footer button {
+    width: 1rem;
+    height: 0.59rem;
+    line-height: 0.59rem;
+    text-align: center;
+    background: #fc4141;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 0; }
+
+.pay-method {
+  width: 100%;
+  height: 0.38rem;
+  line-height: 0.38rem;
+  text-align: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0.8rem; }
+  .pay-method p {
+    width: 100%;
+    border-radius: 0.19rem;
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 0.12rem;
+    color: #ffffff; }
+
+/*# sourceMappingURL=style.css.map */
